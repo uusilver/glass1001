@@ -292,43 +292,9 @@ function complete() {
 				oGlass.className = "glass";
 				oGlass.appendChild(oImg);
 				oLeft.insertBefore(oGlass, oPhoto);
+				$(oGlass).addClass('draggable');
+	    	    $(oGlass).draggable();
 				
-				//眼镜拖动
-				oGlass.onmousedown = function(e) {
-					e = e || event;
-					var disX = e.clientX - this.offsetLeft;
-					var disY = e.clientY - this.offsetTop;
-					document.onmousemove = function(e) {
-						e = e || event;
-						var iL = e.clientX - disX;
-						var iT = e.clientY - disY;
-						if(!oPhoto){
-							oPhoto = document.getElementById("imghead");
-							var maxL = 1999;
-							var matT = 1999;
-						}else{
-							var maxL = oPhoto.offsetWidth - oGlass.offsetWidth;
-							var maxT = oPhoto.offsetHeight - oGlass.offsetHeight;
-						}
-						if(!oGlass){
-							alert("oGlass is null");
-						}
-						
-						iL < 0 && (iL = 0);
-						iT < 0 && (iT = 0);
-						iL > maxL && (iL = maxL);
-						iT > maxT && (iT = maxT);
-						fgm.css(oGlass, {top:iT + "px", left: iL + "px"});
-						return false
-					};
-					document.onmouseup = function() {
-						this.onmouseup = null;
-						this.onmousemove = null;	
-						oGlass.releaseCapture && oGlass.releaseCapture()
-					}
-					this.setCapture && this.setCapture();
-					return false
-				};
 			}			
 		})();
 			

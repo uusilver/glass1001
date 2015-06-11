@@ -1,9 +1,9 @@
 $(function(){
 	
-	 //Ò»¿ªÊ¼Òþ²ØÎÒµÄÏà²á
+	 //Ò»ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½
      $(".personalPhoto").hide();
-     
-     //µã»÷ÎÒµÄÏà²á
+     $( ".draggable" ).draggable();
+     //ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½
      $("#myTab").click(function(){
     	 $("#myTab").addClass("current");
     	 $("#modelTab").removeClass("current");
@@ -12,13 +12,14 @@ $(function(){
     	 $("#right .mask").css({position: "relative"});
      });
      
-   //µã»÷Ä£ÌØÊÔ¾µ
+   //ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½Ô¾ï¿½
      $("#modelTab").click(function(){
     	 $("#modelTab").addClass("current");
     	 $("#myTab").removeClass("current");
     	 $(".personalPhoto").hide();
     	 $(".modelList").show();
     	 $("#right .mask").css({position: "absolute"});
+    	 $(".glass").remove();
      });
      
     
