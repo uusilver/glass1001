@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>在线眼镜模特试戴</title>
+<title>在线眼镜个人试戴</title>
+
 <link href="css/eyeglass.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript"
 	src="http://keleyi.com/keleyi/pmedia/jquery/jquery-1.11.0.min.js"></script>
@@ -14,13 +15,9 @@
 </head>
 
 <body>
-	<!-- <div style="margin-left: 165px">
-		<button type="button" id="btn" stype="width:20px;height:40px;">个人试戴</button>
-		<lable>淘宝商家XXX</lable>
-		<lable>
-		<a href="http://www.taobao.com">点击访问:"http://www.taobao.com</a></lable>
-	</div> -->
+
 	<div id="box">
+
 		<div id="overlay">
 			<div id="load">
 				数据转入中...<span>0%</span>
@@ -32,97 +29,19 @@
 			<div class="modelBox">
 
 				<div class="tab">
-
-					<!-- <ul>
-
-						<li id="modelTab" class="current ico-1">模特试镜</li>
-
-					</ul> -->
 					<div>
-						<button type="button" id="btn" stype="width:20px;height:40px;">个人试戴</button>
+						<button type="button" id="btn" stype="width:20px;height:40px;">模特试戴</button>
 						<lable>淘宝商家XXX</lable>
-						<lable>
-						<a href="http://www.taobao.com">点击访问:"http://www.taobao.com</a></lable>
+						<lable> <a href="http://www.taobao.com">点击访问:"http://www.taobao.com</a></lable>
 					</div>
 
 				</div>
 
-				<div class="modelList">
-
-					<div class="faceType">
-
-						<ul class="normal">
-
-							<li><a href="javascript:;" data-type="*">全 部</a></li>
-
-							<li><a href="javascript:;" data-type="0,2">椭圆脸</a></li>
-
-							<li><a href="javascript:;" data-type="1,3">圆形脸</a></li>
-
-							<li><a href="javascript:;" data-type="4,6">长形脸</a></li>
-
-							<li><a href="javascript:;" data-type="5,9">方形脸</a></li>
-
-							<li><a href="javascript:;" data-type="7,11">瓜子脸</a></li>
-
-							<li><a href="javascript:;" data-type="8,10">心型脸</a></li>
-
-						</ul>
-
-						<div class="active">
-
-							<ul>
-
-								<li>全 部</li>
-
-								<li>椭圆脸</li>
-
-								<li>圆形脸</li>
-
-								<li>长形脸</li>
-
-								<li>方形脸</li>
-
-								<li>瓜子脸</li>
-
-								<li>心型脸</li>
-
-							</ul>
-
-						</div>
-
-					</div>
-
-					<div class="content">
-
-						<ul>
-
-							<li><img id="model1" src="images/model_1.jpg" /></li>
-
-							<li><img src="images/model_2.jpg" /></li>
-
-							<li><img src="images/model_3.jpg" /></li>
-
-							<li><img src="images/model_4.jpg" /></li>
-
-							<li><img src="images/model_5.jpg" /></li>
-
-							<li><img src="images/model_6.jpg" /></li>
-
-							<li><img src="images/model_7.jpg" /></li>
-
-							<li><img src="images/model_8.jpg" /></li>
-
-							<li><img src="images/model_9.jpg" /></li>
-
-							<li><img src="images/model_10.jpg" /></li>
-
-							<li><img src="images/model_11.jpg" /></li>
-
-							<li><img src="images/model_12.jpg" /></li>
-
-						</ul>
-
+				<div class="personalPhoto" class="imgheadStyle">
+					<input type="file" onchange="previewImage(this)" /> <br />
+					<div id="preview">
+						<img id="imghead" width=430 height=440 border=0
+							src='../images/head01_big.jpg' />
 					</div>
 
 				</div>
@@ -345,8 +264,8 @@
 		</div>
 
 	</div>
+	<script src="js/personal.js"></script>
 	<script type="text/javascript" src="js/eyeglass.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
 	<script type="text/javascript">
 		//图片预加载
 		;
